@@ -3,12 +3,16 @@ body{
 }
 
 #sign{
-    margin-left:200px;
+    margin-left:150px;
     margin-top: 250px;
 }
 
 .card{
     height:200px;
+}
+
+.nav{
+    background-color: #DF9C8E;
 }
 
 .jumbotron{
@@ -26,11 +30,26 @@ body{
     border-radius:50%;
 }
 
+.responsive{
+    max-width: 100%;
+    height: auto;
+}
+
 #rulescontainer{
     width:980px;
-    background-color: lightgrey;
 }
 
 #flowerscontainer{
     width:980px;
+}
+
+#rulessign{
+    align-content: center;
+}
+
+#readytoshop{
+    align:center;
+    width:100%;
+    max-width:980px;
+    height:auto;
 }
