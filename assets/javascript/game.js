@@ -1,32 +1,129 @@
-//assign variables
+$(document).ready(function(){
+
+//target number should be between 19-120
+var targetNumber = Math.floor(Math.random()*101+19);
+console.log(targetNumber);
+
+//add to the DOM
+$("#cost").text("Your Bouquet Cost Goal: " + targetNumber);
+
+//random number for each of the flowers. number should be between 1 and 12
+var flower1 = Math.floor(Math.random()*11+1);
+var flower2 = Math.floor(Math.random()*11+1);
+var flower3 = Math.floor(Math.random()*11+1);
+var flower4 = Math.floor(Math.random()*11+1);
+
+console.log(flower1);
+console.log(flower2);
+console.log(flower3);
+console.log(flower4);
 
 //counter variables
+var totalCost = 0;
+var wins = 0;
+var losses = 0;
 
-//for loop for cost options for flowers
+//general win function to call for each flower
+function pickedFlower(){
+    alert("The bouquet is yours!");
+    wins++;
+    $("#wins").text("Bouquets Bought: " + wins);
+}
 
-//each iteration will create variable image for flower
+//general loss function to call for each flower
+function returnedFlower(){
+    alert("Sorry! Please put the flowers back");
+    losses++;
+    $("#losses").text("Bouquets Returned:  " + losses);
+}
 
-//each flower will be given a class ".flower-image"
+//reset function after each win or loss;
+function reset(){
+    targetNumber = Math.floor(Math.random()*101+19);
+    flower1 = Math.floor(Math.random()*11+1);
+    flower2 = Math.floor(Math.random()*11+1);
+    flower3 = Math.floor(Math.random()*11+1);
+    flower4 = Math.floor(Math.random()*11+1);
+    totalCost = 0;
+    $("#totalScore").text("Current Bouquet Total: " + totalCost);
+    $("#cost").text("Your Bouquet Cost Goal: " + targetNumber);
+}
 
-//each flower has a src link
+//on click for each of the flowers
 
-//var imageFlower will be given an attribute (data-flowerValue) and will be set equal to array value
+//flower 1
+$("#flower1").on("click", function(){
+    totalCost = totalCost + flower1;
+    $("#totalScore").text("Current Bouquet Total: " + totalCost);
 
-//each image with all class and attribute will get added to page using jquery dom manipulation
+    //apply win+loss function
 
-//on click even for each of the flowers on the page
+    if (totalCost === targetNumber){
+        pickedFlower();
+        reset();
+    }
 
-    //value requires extractoin of value from data attr
-    //use ($this) keyword specifies to extract the flower value from the clicked flower
-    //use .attr("data-flowerValue") to grab value out of the attribute
-    //need to convert string to integer before adding to counter (use parseInt)
+    else if (totalCost > targetNumber){
+        returnedFlower();
+        reset();
+    }
+})
+
+//flower 2
+$("#flower2").on("click", function(){
+    totalCost = totalCost + flower2;
+    $("#totalScore").text("Current Bouquet Total: " + totalCost);
+
+    //apply win+loss function
+
+    if (totalCost === targetNumber){
+        pickedFlower();
+        reset();
+    }
+
+    else if (totalCost > targetNumber){
+        returnedFlower();
+        reset();
+    }
+})
+
+//flower 3
+$("#flower3").on("click", function(){
+    totalCost = totalCost + flower3;
+    $("#totalScore").text("Current Bouquet Total: " + totalCost);
+
+    //apply win+loss function
+
+    if (totalCost === targetNumber){
+        pickedFlower();
+        reset();
+    }
+
+    else if (totalCost > targetNumber){
+        returnedFlower();
+        reset();
+    }
+})
 
 
-//add flowerValue to counter global variable
-//each click gets added to the global counter
+//flower 4
+$("#flower4").on("click", function(){
+    totalCost = totalCost + flower4;
+    $("#totalScore").text("Current Bouquet Total: " + totalCost);
 
-//win-lose logic
+    //apply win+loss function
 
-//reset function
+    if (totalCost === targetNumber){
+        pickedFlower();
+        reset();
+    }
 
-//adding to the dom
+    else if (totalCost > targetNumber){
+        returnedFlower();
+        reset();
+    }
+})
+
+
+});
+

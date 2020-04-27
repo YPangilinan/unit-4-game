@@ -7,46 +7,90 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!----<link rel = "stylesheet" type = "text/css" href= "assets/css/reset.css">--->
     <link rel= "stylesheet" type = "text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 <body>
 
-    <h1>Pick your bouquet of flowers!</h1>
+    <script src = "assets/javascript/game.js"></script>
 
-    <div class="container">
+    <div class="jumbotron mb-0">
+          <h1 class="text-right" id = "sign">Yssabel's Flower Shop</h1>
+        </div>
+      </div>
+      <ul class="nav justify-content-center bg-dark mt-0">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="rules.html">Flower Shop Rules</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="index.html">Claim Your Bouquet</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="https://ypangilinan.github.io/portfolio.html" target="_blank">Yssabel's Portfolio</a>
+        </li>
+      </ul>
+   
+    <div class="container d-flex justify-content-center" id = "flowerscontainer">
+
         <div class="row">
-            <div class="col-lg-12">
-                <div>
-                    <div id = "flowers"></div>
-                </div>
+            <div class="col-lg-12" id= "flowerimages">
+                <img src = "assets/images/tulip.jpg" class = flowerimg id = "flower1" alt = "tulip">
+                <img src = "assets/images/magnolia.jpg" class = flowerimg id = "flower2" alt = "magnolia">
+                <img src = "assets/images/alstromeria.jpg" class = flowerimg id = "flower3" alt = "alstromeria">
+                <img src = "assets/images/peony.jpg" class = flowerimg id = "flower4" alt = "peony">
             </div>
-         </div>
-         
+        </div>
+    
          <div class="row">
-             <div class="col-lg-12">
-                 <div>
-                     <div id = "wins"></div>
-                 </div>
-                 <div>
-                     <div id = "losses"></div>
-                 </div>
-                 <div>
-                     <div id = "total score"></div>
-                 </div>
-                 <div>
-                     <div id = "cost"></div>
-                 </div>
-             </div>
+             <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <div id = "wins">Bouquets Bought:  </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <div id = "losses">Bouquets Reutrned: </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div>
+                                    <div id = "totalScore"> Current Bouquet Total:  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div>
+                                        <p id = "cost"> Bouquet Cost:</p>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                 
+    
+             
          </div>
+
+         
 
     </div>
 
-    <script src = "assets/javascript/game.js"></script>
 
 
 
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
