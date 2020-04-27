@@ -9,6 +9,14 @@ body{
 
 .card{
     height:200px;
+    border-color:  #DF9C8E;
+    border-radius: 50%;
+}
+
+.card-body{
+    margin-top: 50px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .nav{
@@ -37,6 +45,9 @@ body{
 
 #rulescontainer{
     width:980px;
+    font-family: 'Oswald', sans-serif;
+    font-size:20px;
+    margin-bottom:10px;
 }
 
 #flowerscontainer{
@@ -44,7 +55,7 @@ body{
 }
 
 #rulessign{
-    align-content: center;
+    margin-left:30px;
 }
 
 #readytoshop{
