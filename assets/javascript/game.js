@@ -48,7 +48,7 @@ function reset(){
     $("#totalcost").html("Bouquet Cost Target:  <br/>" + targetNumber);
 }
 
-//on click for each of the flowers
+//on click function for each of the flowers
 
 //flower 1
 $("#flower1").on("click", function(){
