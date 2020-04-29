@@ -24,15 +24,20 @@ $("#totalcost").html("Bouquet Cost Target:  <br/>" + targetNumber);
 
 //general win function to call for each flower
 function pickedFlower(){
-    alert("The bouquet is yours!");
     wins++;
+    setTimeout(function (){
+    alert("The bouquet is yours!");
+},200)
     $("#wins").html("Bouquets Bought: </br>" + wins);
 }
 
 //general loss function to call for each flower
 function returnedFlower(){
-    alert("Sorry! Please put the flowers back");
     losses++;
+    setTimeout(function (){
+        alert("Sorry! Please put the flowers back");
+        reset();
+    },200)
     $("#losses").html("Bouquets Returned: </br>" +losses);
 }
 
@@ -59,12 +64,12 @@ $("#flower1").on("click", function(){
 
     if (totalCost === targetNumber){
         pickedFlower();
-        reset();
+        
     }
 
     else if (totalCost > targetNumber){
         returnedFlower();
-        reset();
+        
     }
 })
 
@@ -77,12 +82,12 @@ $("#flower2").on("click", function(){
 
     if (totalCost === targetNumber){
         pickedFlower();
-        reset();
+        
     }
 
     else if (totalCost > targetNumber){
         returnedFlower();
-        reset();
+       
     }
 })
 
@@ -95,12 +100,12 @@ $("#flower3").on("click", function(){
 
     if (totalCost === targetNumber){
         pickedFlower();
-        reset();
+        
     }
 
     else if (totalCost > targetNumber){
         returnedFlower();
-        reset();
+        
     }
 })
 
@@ -114,12 +119,12 @@ $("#flower4").on("click", function(){
 
     if (totalCost === targetNumber){
         pickedFlower();
-        reset();
+       
     }
 
     else if (totalCost > targetNumber){
         returnedFlower();
-        reset();
+        
     }
 })
 
