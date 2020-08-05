@@ -22,4 +22,4 @@ The technologies used to create this app are:
 Please check it out [here](https://ypangilinan.github.io/unit-4-game/)
 
 ### Application Motivation
-This game was created as a spinoff of the following game demo. [Crystal Collector Game](https://www.youtube.com/watch?v=yNI0l2FMeCk&feature=youtu.be)
+This game was created as a spinoff of the following game demo. [Trivia Game](https://www.youtube.com/watch?v=fBIj8YsA9dk&feature=youtu.be)
